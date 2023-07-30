@@ -7,6 +7,14 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
+
+test('page title', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Display the page title 
+  console.log(page.title());
+});
+
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
